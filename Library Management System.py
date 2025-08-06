@@ -21,13 +21,35 @@ class library(self):
                 print(f'{idx}.{books}')
 
     def borrow_book(self,index):
-        if 0<index<len(self.books):
+        if (0<index<len(self.books)):
             book=self.books[index-1]
-            if self.is_available:
-                self.is_available=False
+            if book.is_available:
+                book.is_available=False
                 print(f'You have successfully borrowed the book - {book}')
             else:
                 print("This book is already borrowed and not returned yet!")
             
         else:
             print("Please enter the correct book number!")
+
+    def return_book(self,index):
+        if (0<index<len(index-1)):
+            returned_book=self.books[index-1]
+            if not returned_book.is_available:
+                returned_book.is_available=True
+                print(f'You have successfully returned the book - {returned_book}')
+            else:
+                print("This book is not borrowed")
+        else:
+            print("Please enter the correct book number")
+
+def main():
+    library=library()
+
+    while True:
+        print("---- Library Menu ----\n")
+        print("1.Add book")
+        print("2.Display books")
+        print("3.Borrow book")
+        print("4.Return book")
+        print("5.Exit")
