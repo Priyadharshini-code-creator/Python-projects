@@ -6,16 +6,23 @@ while True:
     print("4. Return Book")
     print("5. Exit\n")
     User_input=input("Enter your choice(1-5):")
-    if(User_input=='1')
+    if(User_input=='1'):
+        
 
  class books:
-    def __init__(self,Author,Title)
-    self.Author=Author
-    self.Title=Title
-    self.is_available="True"
+    def __init__(self,Author,Title):
+       self.Author=Author
+       self.Title=Title
+       self.is_available="True"
 
-class library(books):
-    def_init
+    def __str__(self):
+        return f'{self.Title} by {self.Author}'-{"Available" if self.is_available else "Not Available"}
+
+class library(self):
+    self.books=[]
+    def add_books(self,Author,Title):
+        new_book=books(Author,Title)
+        self.books.append(new_book)
 
 
     
